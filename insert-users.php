@@ -3,7 +3,9 @@
 
 $Name = $_POST["Name"];
 $Email = $_POST["Email"];
-$Interest = join(", ", $_POST['Interest']);
+$Industry = $_POST['Industry'];
+$Technical = $_POST['Technical'];
+$Career = $_POST['Career'];
 $Role = $_POST["Role"];
 
 
@@ -15,12 +17,13 @@ $dbpassword = "";
 $pdo = new PDO($dsn, $dbusername, $dbpassword);
 
 //prepare
-$stmt = $pdo->prepare("INSERT INTO `pusers` (`userId`, `Name`, `Email`, `Interest`, `Role`)
-VALUES (NULL, '$Name', '$Email', '$Interest', '$Role');");
+$stmt = $pdo->prepare("INSERT INTO `ajax` (`userId`, `Name`, `Email`, `Industry`, `Technical`, `Career`, `Role`)
+VALUES (NULL, '$Name', '$Email', '$Industry', '$Technical', '$Career','$Role');");
 
 //execute
-if ($stmt->execute()) { ?>
-<h1>Thank You</h1>
-<?php }  
-?>
+if($stmt->execute()){ 
+	echo('{ "success":"true" }');
+}else{ 
+	echo('{ "success":"false" }');
+}
 

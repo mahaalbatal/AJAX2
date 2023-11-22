@@ -27,44 +27,44 @@
 
     </header>
 
-    <form action="process-contact.php" method="POST">
+    <form action="" method="POST">
 
         <label for="firstName">Name:</label>
-        <input name="firstName" type="text" required>
+        <input id="name1" name="Name" type="text" required>
         <br><br>
 
         <label for="email"> Email:</label>
-        <input type="email" placeholder="username@gmail.com" required />
+        <input id="email" type="email" name="Email" placeholder="username@gmail.com" required />
         <br><br>
 
         <label for="Categories">Category interests:</label>
         <br><br>
 
-        <input type="checkbox" name="Categories">Industry
-        <input type="checkbox" name="Categories">Technical
-        <input type="checkbox" name="Categories">Career
+        <input id="Industry" type="checkbox" name="Industry" value="Industry">Industry
+        <input id="Technical" type="checkbox" name="Technical" value="Technical">Technical
+        <input id="Career" type="checkbox" name="Career" value="Career">Career
         <br><br>
 
         <label for="yourRole">Your Role: </label>
         <br><br>
 
-        <select name="role">
-                <option value="0">Writer</option>
-                <option value="1">Contributor</option>
-                <option value="2">Administrator</option>
+        <select id="role" name="role">
+                <option value="Writer">Writer</option>
+                <option value="Contributor">Contributor</option>
+                <option value="Administrator">Administrator</option>
         </select>
         <br><br>
 
-        <input type="submit">
+        <input id="submit" type="submit">
 
 
     </form>
-
+            <p id="message">  </p>
     <footer>
         <p> We use cookies to provide you with the best possible experience.</p>
         <p>They also allows us to analyze user behavior in order to constantlyimprove the website for you. <a href="#">Accept Cookies</a></p>
         
     </footer>
-
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
