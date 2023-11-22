@@ -1,5 +1,4 @@
 
-
 let name1 = document.querySelector("#name1");
 let email = document.querySelector("#email");
 let Industry = document.querySelector("#Industry");
